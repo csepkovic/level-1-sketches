@@ -28,8 +28,10 @@ void draw() {
 }
 }
 void keyPressed() {
+  if (isJumping==false){
   yVel = 5;
   isJumping = true;
+  }
 }
 
 
@@ -56,4 +58,3 @@ void keyPressed() {
 //if (x2 == -300) {
 //a = (int)random(250, 800);
 //x2=1000;
-
