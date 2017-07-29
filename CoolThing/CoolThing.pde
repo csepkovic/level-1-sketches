@@ -1,39 +1,52 @@
 import java.util.Random;
 void setup() {
-  size(500,500);
+  size(1000,1000);
 }
 int x;
 int y;
 int squares;
 void draw() {
-  int random = new Random().nextInt(255);
-  int random1 = new Random().nextInt(255);
-  int random2 = new Random().nextInt(255);
+  int random4 = new Random().nextInt(255);
+  int random5 = new Random().nextInt(255);
+  int random6 = new Random().nextInt(255);
   background(0, 0, 0);
   if (x<=0){
-    for (int i=0; i<450; i++){
+    for (int i=0; i<900; i++){
      x++; 
     }
-  } else if (x>=450){
-    for (int i=0; i<450; i++){
+  } else if (x>=900){
+    for (int i=0; i<900; i++){
      x--; 
     }
   } if (y<=0){
-    for (int i=0; i<450; i++){
+    for (int i=0; i<900; i++){
      y++; 
     }
-  } else if (y>=450){
-    for (int i=0; i<450; i++){
+  } else if (y>=900){
+    for (int i=0; i<900; i++){
      y--; 
     }
-  } fill (random, random1, random2);
+  } fill (random4, random5, random6);
   for (int i = 0; i<squares; i++) {
-  rect(x++, y++, 50, 50);
-  x++;
-  y++;
+    noStroke();
+    rect(x++, y++, 100, 100);
+    x++;
+    y++;
+  }
+  for (int i = 0; i<squares; i++) {
+    noStroke();
+    rect(x++, y+400, 100, 100);
+    x++;
+    y++;
+  }
+  for (int i = 0; i<squares; i++) {
+    noStroke();
+    rect(x+400, y++, 100, 100);
+    x++;
+    y++;
   }
 }
 
-void mouseClicked() {
+void keyPressed() {
   squares++;
 }
